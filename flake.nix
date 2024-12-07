@@ -25,9 +25,11 @@
             packages = with pkgs; [
               ruby
               pkg-config
+              libyaml
             ];
             shellHook = ''
               export LD_LIBRARY_PATH="${pkgs.ruby}/lib:$LD_LIBRARY_PATH"
+              export LD_LIBRARY_PATH="${pkgs.libyaml}/lib:$LD_LIBRARY_PATH"
             '';
           };
         }
